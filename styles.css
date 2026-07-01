@@ -1,13 +1,14 @@
 :root {
-  --ink: #172033;
-  --muted: #5d6678;
-  --blue: #06468f;
-  --blue-dark: #062c5d;
-  --amber: #f0a320;
-  --steel: #eef2f6;
-  --line: #d9e0e8;
+  --ink: #132238;
+  --muted: #5d6676;
+  --blue: #004b93;
+  --blue-dark: #002f6c;
+  --amber: #ef6c00;
+  --steel: #eef3f8;
+  --line: #d8e1eb;
   --white: #ffffff;
   --green: #2e7d66;
+  --blue-soft: #eaf2fb;
   --shadow: 0 18px 48px rgba(10, 29, 58, 0.14);
 }
 
@@ -115,7 +116,7 @@ nav a:hover,
 
 .hero {
   position: relative;
-  min-height: min(760px, 82vh);
+  min-height: auto;
   overflow: hidden;
   background: var(--steel);
 }
@@ -124,9 +125,29 @@ nav a:hover,
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(248, 250, 252, 0.96) 0%, rgba(248, 250, 252, 0.84) 42%, rgba(248, 250, 252, 0.24) 100%),
-    url("assets/hero-machine.png") right 54% bottom 12% / min(940px, 62vw) auto no-repeat,
+    linear-gradient(90deg, rgba(248, 250, 252, 0.98) 0%, rgba(248, 250, 252, 0.88) 50%, rgba(248, 250, 252, 0.36) 100%),
+    url("assets/hero-machine.png") right 52% bottom 9% / min(900px, 58vw) auto no-repeat,
     #f6f8fb;
+}
+
+.hero-bg::after {
+  position: absolute;
+  inset: auto 0 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--blue), var(--amber));
+  content: "";
+}
+
+.hero-shell {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
+  gap: clamp(28px, 5vw, 68px);
+  align-items: center;
+  width: min(1180px, calc(100% - 36px));
+  min-height: min(820px, calc(100vh - 72px));
+  padding: clamp(50px, 7vw, 94px) 0;
+  margin: 0 auto;
 }
 
 .hero-content {
@@ -134,10 +155,10 @@ nav a:hover,
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: min(720px, calc(100% - 36px));
-  min-height: min(720px, 78vh);
-  padding: clamp(48px, 8vw, 94px) 0 clamp(70px, 10vw, 120px);
-  margin-left: clamp(18px, 6vw, 82px);
+  width: auto;
+  min-height: 0;
+  padding: 0;
+  margin-left: 0;
 }
 
 .eyebrow {
@@ -157,9 +178,9 @@ p {
 }
 
 h1 {
-  max-width: 720px;
+  max-width: 780px;
   margin-bottom: 20px;
-  font-size: clamp(2.4rem, 6vw, 5.6rem);
+  font-size: clamp(2.25rem, 5vw, 4.9rem);
   line-height: 0.98;
   letter-spacing: 0;
 }
@@ -185,7 +206,8 @@ h3 {
 }
 
 .hero-actions,
-.hero-facts {
+.hero-facts,
+.hero-values {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -227,6 +249,26 @@ h3 {
   border-radius: 6px;
   font-size: 0.92rem;
   font-weight: 700;
+}
+
+.hero-values {
+  margin-top: 18px;
+}
+
+.hero-values span {
+  padding: 8px 12px;
+  color: var(--blue-dark);
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--amber);
+  border-radius: 6px;
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.hero-form {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(10px);
 }
 
 .section-inner {
@@ -315,6 +357,10 @@ h3 {
   gap: 16px;
 }
 
+.feature-grid-large {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .feature-card {
   padding: 22px;
 }
@@ -394,6 +440,10 @@ figcaption {
   gap: 16px;
 }
 
+.product-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .model-card {
   display: flex;
   flex-direction: column;
@@ -411,8 +461,80 @@ figcaption {
   border-color: #e4d6bd;
 }
 
+.model-name-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 12px;
+  padding: 0;
+  margin: 14px 0 22px;
+  color: var(--ink);
+  list-style: none;
+}
+
+.model-name-list li {
+  padding: 8px 10px;
+  background: var(--blue-soft);
+  border: 1px solid #cfddeb;
+  border-radius: 6px;
+  font-size: 0.94rem;
+  font-weight: 800;
+}
+
+.technology-section {
+  padding: 76px 0;
+}
+
+.option-grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.option-grid span {
+  padding: 12px 14px;
+  color: var(--blue-dark);
+  background: var(--blue-soft);
+  border: 1px solid #cfddeb;
+  border-left: 4px solid var(--amber);
+  border-radius: 6px;
+  font-weight: 800;
+}
+
 .spec-band {
   background: #eef2f6;
+}
+
+.tech-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.7fr) minmax(300px, 1.3fr);
+  gap: clamp(26px, 5vw, 62px);
+  align-items: start;
+}
+
+.tech-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.tech-list article {
+  min-height: 126px;
+  padding: 20px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.tech-list strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--blue-dark);
+  font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+  line-height: 1.1;
+}
+
+.tech-list span {
+  color: var(--muted);
 }
 
 .table-wrap {
@@ -513,6 +635,18 @@ tr:last-child td {
   box-shadow: var(--shadow);
 }
 
+.lead-form h2 {
+  margin-bottom: 0;
+  color: var(--blue-dark);
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
+}
+
+.lead-form p {
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
 .lead-form label {
   display: grid;
   gap: 8px;
@@ -574,29 +708,32 @@ tr:last-child td {
     margin-left: auto;
   }
 
-  .hero {
-    min-height: 720px;
-  }
-
   .hero-bg {
     background:
       linear-gradient(180deg, rgba(248, 250, 252, 0.98) 0%, rgba(248, 250, 252, 0.93) 54%, rgba(248, 250, 252, 0.26) 100%),
-      url("assets/hero-machine.png") center bottom 46px / min(760px, 96vw) auto no-repeat,
+      url("assets/hero-machine.png") center bottom 34px / min(760px, 96vw) auto no-repeat,
       #f6f8fb;
+  }
+
+  .hero-shell {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding: 52px 0 340px;
   }
 
   .hero-content {
     justify-content: flex-start;
-    min-height: 710px;
+    min-height: 0;
     margin: 0 auto;
-    padding-top: 54px;
+    padding-top: 0;
   }
 
   .split,
   .visual-grid,
   .service-layout,
   .contact-layout,
-  .missing-layout {
+  .missing-layout,
+  .tech-layout {
     grid-template-columns: 1fr;
   }
 
@@ -604,8 +741,13 @@ tr:last-child td {
   .feature-grid,
   .model-grid,
   .spec-images,
-  .service-list {
+  .service-list,
+  .tech-list {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -631,12 +773,13 @@ tr:last-child td {
     white-space: nowrap;
   }
 
-  .hero {
-    min-height: 740px;
+  .hero-content {
+    width: 100%;
   }
 
-  .hero-content {
-    width: min(100% - 28px, 720px);
+  .hero-shell {
+    width: min(100% - 28px, 1180px);
+    padding: 44px 0 270px;
   }
 
   .hero-actions .button {
@@ -647,7 +790,9 @@ tr:last-child td {
   .feature-grid,
   .model-grid,
   .spec-images,
-  .service-list {
+  .service-list,
+  .tech-list,
+  .model-name-list {
     grid-template-columns: 1fr;
   }
 
