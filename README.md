@@ -4,6 +4,9 @@ Landing page tĩnh cho dòng máy đúc áp lực buồng nguội Haitian HDC II
 
 ## Nguồn nội dung
 
+- File nội dung mới: `/Users/yenkieu/Downloads/LandingPage_HDCII_TrungNguyenTNT_Complete.md`
+- Logo thương hiệu: `/Users/yenkieu/Desktop/logo Trung Nguyen TNT.png`
+- Nhận diện và thông tin công ty: https://trungnguyentw.com/
 - File nội dung: `/Users/yenkieu/Downloads/HDC-LandingPage-Content.md`
 - Website mẫu: https://mayepphun.com.vn/
 - Brochure PDF người dùng cung cấp: HDC Cold Chamber Die Casting Machine HDC200-HDC8800 II
@@ -20,10 +23,12 @@ Landing page tĩnh cho dòng máy đúc áp lực buồng nguội Haitian HDC II
 
 ## Nội dung đã chỉnh trong lần này
 
-- Dựng lại landing page theo cấu trúc trong `HDC-LandingPage-Content.md`.
+- Dựng lại landing page theo cấu trúc trong `LandingPage_HDCII_TrungNguyenTNT_Complete.md`.
+- Áp logo và nhận diện Trung Nguyên TNT: đỏ/cam/đen kết hợp hình ảnh máy HDC II.
+- Bổ sung thông tin công ty từ website TNT: 15 năm kinh nghiệm, hotline, email, chi nhánh Bắc/Nam.
 - Thêm form đăng ký tư vấn ở hero và form liên hệ cuối trang.
 - Thêm CTA tải catalogue, dùng file `assets/hdc-ii-catalogue.pdf`.
-- Chỉnh màu theo tinh thần brochure HDC: xanh Haitian, cam nhấn, nền xám/trắng kỹ thuật.
+- Bỏ các khối placeholder như Lorem ipsum, LOGO giả, Project 01; chuyển thành mục tư liệu cần bổ sung.
 - Giữ các thông số kỹ thuật đã có nguồn từ tài liệu HDC II; không thêm giá, tồn kho hoặc chính sách bảo hành giả.
 
 ## Thông tin cần xác nhận trước khi chạy quảng cáo
